@@ -19,7 +19,6 @@ def train_classifier(plot_learning_rate_graph=False):
     # Model training
     learn = cnn_learner(data, models.resnet34, metrics=error_rate)
 
-
     # Train for 4 epochs
     learn.fit_one_cycle(4)
 
@@ -45,10 +44,7 @@ def train_classifier(plot_learning_rate_graph=False):
     learn.save('stage-2')
 
     # Show results
-    #learn.show_results()
-
-    learn.fit_one_cycle(4)
-
+    learn.show_results()
 
 
 
